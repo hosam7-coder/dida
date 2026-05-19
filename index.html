@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -13,14 +14,13 @@
 body {
     margin: 0;
     font-family: 'Cairo', 'Tajawal', 'Segoe UI', sans-serif;
-    /* خلفية متدرجة فخمة باللونين الأبيض والأسود والرمادي */
-    background: linear-gradient(135deg, #111111, #333333, #e0e0e0, #ffffff);
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     text-align: center;
     overflow-x: hidden;
     min-height: 100vh;
-    color: #222222;
+    color: #ffffff;
 }
 
 @keyframes gradientBG {
@@ -47,6 +47,7 @@ body {
     color: #ffffff;
     margin-bottom: 25px;
     text-shadow: 0 2px 10px rgba(255,255,255,0.2);
+    font-size: 28px; /* مضبوط للموبايل */
 }
 
 input {
@@ -59,8 +60,9 @@ input {
     text-align: center;
     font-size: 16px;
     outline: none;
-    width: 80%;
+    width: 85%;
     max-width: 280px;
+    box-sizing: border-box;
 }
 
 input::placeholder {
@@ -107,125 +109,138 @@ button:hover {
 #wahsh {
     display: none;
     font-family: 'Tajawal', sans-serif;
-    font-size: 45px;
+    font-size: 35px; /* أنسب للموبايل بدلا من 45 */
     font-weight: 900;
     color: #ffffff;
     background: #111111;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* MAIN */
 #main {
     display: none;
-    padding: 30px 20px;
+    padding: 25px 15px; /* تقليل الهوامش الجانبية للموبايل */
+    box-sizing: border-box;
 }
 
 .msg {
-    font-size: 34px;
+    font-size: 26px; /* حجم متناسق مع شاشات الموبايل */
     font-weight: 900;
-    color: #111111;
+    color: #ffffff;
     margin-bottom: 25px;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
 }
 
 /* تصميم العداد الزمني الكبير والمميز */
 .counter-title {
-    font-size: 24px;
-    color: #111111;
+    font-size: 18px; /* حجم مرن */
+    color: #eeeeee;
     margin-bottom: 15px;
     font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
+    padding: 0 10px;
 }
 
 .counter-container {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    max-width: 500px;
+    gap: 8px; /* تقليل الفراغات ليناسب العرض */
+    width: 100%;
+    max-width: 450px;
     margin: 0 auto 35px auto;
-    background: rgba(0, 0, 0, 0.85);
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 10px; /* تقليل الحشو */
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
 }
 
 .counter-box {
     background: #ffffff;
     color: #111111;
-    padding: 15px 10px;
+    padding: 12px 5px;
     border-radius: 12px;
-    min-width: 85px;
+    flex: 1; /* يضمن توزيع البوكسات بالتساوي ومتقفلش على بعض */
+    max-width: 90px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .counter-number {
-    font-size: 34px;
+    font-size: 24px; /* حجم خط مرن للموبايل عشان الأرقام الكبيرة متطلعش بره */
     font-weight: 900;
     display: block;
 }
 
 .counter-label {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
 }
 
 /* الكروت */
 .card {
-    margin: 35px auto;
+    margin: 25px auto;
     background: #ffffff;
-    padding: 15px;
+    padding: 12px;
     border-radius: 20px;
+    width: 90%; /* يعتمد على عرض الشاشة */
     max-width: 340px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     border: 1px solid #dddddd;
+    box-sizing: border-box;
 }
 
 .card img {
     width: 100%;
     border-radius: 15px;
     display: block;
+    height: auto; /* يحافظ على أبعاد الصورة الأصلية */
 }
 
 .cap {
     margin-top: 14px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     color: #111111;
 }
 
 /* الخاتمة */
 .end {
-    margin-top: 50px;
-    font-size: 24px;
+    margin-top: 40px;
+    font-size: 20px;
     font-weight: 700;
     color: #ffffff;
-    line-height: 1.8;
-    background: rgba(0, 0, 0, 0.85);
+    line-height: 1.6;
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
-    padding: 30px 25px;
+    padding: 20px;
+    width: 90%;
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
 }
 
 /* كلمة خلصنا الكبيرة */
 .finish-text {
     font-family: 'Tajawal', sans-serif;
-    font-size: 60px;
+    font-size: 45px; /* تم تقليلها لتناسب الموبايل */
     font-weight: 900;
-    color: #111111;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-shadow: 2px 4px 12px rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     animation: pulse 2s infinite alternate;
 }
 
 @keyframes pulse {
     0% { transform: scale(1); }
-    100% { transform: scale(1.08); }
+    100% { transform: scale(1.05); }
 }
 </style>
 </head>
@@ -300,7 +315,6 @@ function checkPass(){
         
         let song = document.getElementById("mySong");
         if(song) {
-            // كود قوي لإجبار المتصفح على تشغيل الصوت فور الضغط على الزرار
             song.muted = false;
             song.play().catch(err => {
                 console.log("تنبيه المتصفح للتشغيل التلقائي:", err);
